@@ -6,6 +6,27 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
+import styled from 'styled-components'
+
+const Botao = styled.button`
+  color: var(--black);
+  border: 1px solid var(--white);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity .3s;
+
+  &:hover,
+  &:focus {
+    opacity: .5;
+`
 
 function CadastroVideo() {
   const history = useHistory();
@@ -13,8 +34,8 @@ function CadastroVideo() {
   const categoryTitles = categorias.map(({ titulo }) => titulo);
   const { handleChange, values } = useForm({
     titulo: 'Video padrão',
-    url: 'https://www.youtube.com/watch?v=jOAU81jdi-c',
-    categoria: 'Front End',
+    url: 'https://www.youtube.com/watch?v=IkOVe40Sy0U',
+    categoria: 'Desenvolvimento Web',
   });
 
   useEffect(() => {
@@ -31,7 +52,7 @@ function CadastroVideo() {
 
       <form onSubmit={(event) => {
         event.preventDefault();
-        // alert('Video Cadastrado com sucesso!!!1!');
+    
 
         const categoriaEscolhida = categorias.find((categoria) => {
           return categoria.titulo === values.categoria;
@@ -70,9 +91,9 @@ function CadastroVideo() {
           suggestions={categoryTitles}
         />
 
-        <Button type="submit">
+        <Botao type="submit">
           Cadastrar
-        </Button>
+        </Botao>
       </form>
 
       <br />

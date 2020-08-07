@@ -1,11 +1,13 @@
 import React from 'react';
 import { FooterBase } from './styles';
+import Image from './styles'
+import Git from '../../assets/img/github.png'
 
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <a href="https://github.com/maxassis/">
+        <Image src={Git} alt="Logo" />
       </a>
       <p>
         Criado por Max Assis
@@ -13,5 +15,6 @@ function Footer() {
     </FooterBase>
   );
 }
+
 
 export default Footer;

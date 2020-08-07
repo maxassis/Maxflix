@@ -14,3 +14,8 @@ export const FooterBase = styled.footer`
     margin-bottom: 50px;
   }
 `;
+
+const Image = styled.img`
+  width: 50px;
+`
+export default Image
