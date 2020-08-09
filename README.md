@@ -1,7 +1,9 @@
 **Sobre**
+
 Projeto de um website de stream de videos semalhante a netflix e youtube, desenvolvido com react
 
 **Desenvolvimento**
+
 Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
 
     cd "diretorio de sua preferencia"
